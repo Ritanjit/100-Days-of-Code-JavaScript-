@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Welcome to GULF GOLF 2K24 !!</h1>
+        <script>
+
+            /* Golf Game in JavaScript */
+
+            // Scores in golf...
+            const SCORES = ["HOLE-IN-ONE !!!", "Eagle !!", "Birdie !", "Par :)", "Bogey :(", "Double Bogey :((", "Go Home ╥﹏╥"];
+
+            // Function to find score...
+            function findScore(par, strokes) {
+                if (strokes == 1) {
+                    return alert(SCORES[0]);
+                } else if (strokes <= par - 2) {
+                    return alert(SCORES[1]);
+                } else if (strokes == par - 1) {
+                    return alert(SCORES[2]);
+                } else if (strokes == par) {
+                    return alert(SCORES[3]);
+                } else if (strokes == par + 1) {
+                    return alert(SCORES[4]);
+                } else if (strokes == par + 2) {
+                    return alert(SCORES[5]);
+                } else {
+                    return alert(SCORES[6]);
+                }
+            }
+
+            // Displaying the score card...
+            let userInput1 = prompt("Enter par : ");
+            let userInput2 = prompt("Enter strokes : ");
+            findScore(userInput1, userInput2);
+            
+        </script>
+    </body>
+</html>
