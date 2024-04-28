@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BLACKJACK MANIA</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+            /* BlackJack in JavaScript */
+
+            let count = 0;
+
+            // card counting function (method 2)
+            function blackJack(card) {
+                if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+                    count++;
+                } else if (card == 7 || card == 8 || card == 9) {
+                    count = 0;
+                } else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') {
+                    count--;
+                } else {
+                    return 'INVALID CARD !';
+                }
+                if (count > 0) {
+                    alert('    Calculating Score...\n    Count : ' + count + '\n    You Should BET !!');
+                    alert('\n    Result : YOU WIN !');
+                } else {
+                    alert('    Calculating Score...\n    Count : ' + count + '\n    You Should HOLD !!');
+                    alert('\n    Result : YOU WIN !');
+                }
+            }
+
+            // Taking user input
+            let userInput=prompt('--LETS PLAY BLACKJACK--\nENTER YOU CARD BELOW : ');
+            let a = blackJack(userInput);
+
+        </script>
+    </body>
+</html>

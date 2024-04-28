@@ -1,5 +1,5 @@
 
-/* BlackJack in JavaScript */
+// /* BlackJack in JavaScript */
 
 let count = 0;
 
@@ -27,16 +27,20 @@ function blackjack(card){
     default:
       return 'INVALID CARD !';
   }
+  console.log('\n\n\t\t  --LETS PLAY BLACKJACK--');
   if(count>0){
-    console.log('Count : ' + count);
-    console.log('You Should BET !!');
+    console.log('\n\t\t\tCount : ' + count);
+    console.log('\t\t    You Should BET !!');
+    console.log('\n\t\t    Result : YOU WIN !');
   } else{
-    console.log('Count : ' + count);
-    console.log('You Should HOLD !!');
+    console.log('\n\t\t\tCount : ' + count);
+    console.log('\t\t    You Should HOLD !!');
+    console.log('\n\t\t    Result : YOU WIN !');
   }
 }
 
-blackjack(3);
-
+let a = blackjack('A');
+count = 0;
+let b = blackjack(2);
 
 
