@@ -1,5 +1,5 @@
 
-/* Logical operators in Comparision */
+/* Logical operators in Comparison */
 
 // Using two if loops...
 function and(value){

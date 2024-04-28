@@ -1,5 +1,5 @@
 
-/* Switch Case - Defaul case */
+/* Switch Case - Default case */
 
 function switchOfStuff(val) {
     let answer = "";
