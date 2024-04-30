@@ -15,8 +15,12 @@ let bestMovies = {
 }
 
 // Updating objects - Dot notation 
-bestMovies.Rocky = ['Action','Sport','Drama'];
+bestMovies.Rocky = ['Action','Sport','Drama'];          // Modifying data
+bestMovies.WALL_E = ['Adventure','Drama'];              // Adding new data
 
 // Updating objects - Bracket notation
-bestMovies["Fight club"] = ['Thriller','Action'];
+bestMovies["Fight club"] = ['Thriller','Action'];       // Modifying data
+bestMovies['Grave of Fireflies'] = ['Drama','War'];     // Adding new data
+
+console.log(bestMovies);
 
