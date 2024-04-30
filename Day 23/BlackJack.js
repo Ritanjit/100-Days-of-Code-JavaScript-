@@ -1,8 +1,6 @@
 
-// /* BlackJack in JavaScript */
-
+/* BlackJack in JavaScript */
 let count = 0;
-
 // Card counting function (method 1)
 function blackjack(card){
   switch(card){
@@ -27,6 +25,7 @@ function blackjack(card){
     default:
       return 'INVALID CARD !';
   }
+  
   console.log('\n\n\t\t  --LETS PLAY BLACKJACK--');
   if(count>0){
     console.log('\n\t\t\tCount : ' + count);
