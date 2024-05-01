@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOK CHECKER</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+            /* Property Checker for JavaScript Objects */
+
+            // Library of books
+            const BOOKS = {
+                'Paulo Coelho': 'The Alchemist',
+                'Harper Lee': 'To Kill a Mockingbird',
+                'Marcus Aurelius': 'Meditations',
+                'J D Salinger': 'The Catcher in the Rye',
+                'Ichiro Kishimi': 'The Courage to be Disliked',
+                'Rachel Ward': 'Numbers',
+                'Rainbow Rowell': 'Eleanor & Park'
+            }
+
+            // Function to check property
+            function checkBook(obj, title) {
+                if (obj.hasOwnProperty(title)) {
+                    alert('\nBook Found !! \n' + '\n--Book Details--' +'\nTitle : ' + obj[title] + '\nAuthor : ' + title);
+                } else{
+                    alert('Book Not Found !');
+                }
+            }
+
+            // Taking user input
+            alert('--JAVASCRIPT BOOK CHECKER--');
+            let authorName = prompt('Enter author of the book : ');
+            checkBook(BOOKS, authorName);
+
+        </script>
+    </body>
+</html>
