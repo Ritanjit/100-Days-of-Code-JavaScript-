@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "Arunachal",
+        "Favourite",
         "Jammu",
         "Jharkhand",
         "Karnataka",
@@ -12,5 +13,8 @@
         "Pradesh",
         "SUPRAAAAA",
         "Uttar"
+    ],
+    "cSpell.ignoreWords": [
+        "Wonderwall"
     ]
 }
