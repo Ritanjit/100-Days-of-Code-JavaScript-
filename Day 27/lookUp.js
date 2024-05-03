@@ -13,7 +13,7 @@ const SONGS = {
     'AC/DC' : 'Back in Black',
 }
 
-// Function to loop up songs by bands
+// Function to look up songs by bands
 function lookUp(band){
     return SONGS[band];
 }

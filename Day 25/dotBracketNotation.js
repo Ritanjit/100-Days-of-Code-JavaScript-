@@ -24,7 +24,6 @@ let e = superCars['ford GT'];
 let bugatti = 'bugatti chiron';
 let f = superCars[bugatti];
 
-
 // TIP: use bracket notation when your property name has spaces in between.
 
 
