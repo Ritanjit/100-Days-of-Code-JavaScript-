@@ -24,7 +24,7 @@ function checkProp(obj,prop){
 let a = checkProp(BOOKS,'Marcus Aurelius');
 console.log('\n\n\t      --JavaScript Property Checker--');
 console.log('\n\t\tsearching...');
-console.log('\n\t\t' + a + '\n\n');
+console.log('\n\t   ' + a + '\n\n');
 
 // TIP: The if statement by default executes the commands inside it if the condition is True. 
 
