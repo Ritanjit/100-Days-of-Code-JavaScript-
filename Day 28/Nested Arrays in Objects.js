@@ -32,7 +32,7 @@ const CARS = [
     }
 ];
 
-// Accessing sub properties...
+// Accessing sub arrays in objects...
 let hModel = CARS[3].Model;
 let hType = CARS[3].Type[0];
 let hHP = CARS[3].HP;
