@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOK CHECKER</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+
+            /* Music Library Update System */
+
+            // Albumns in the library
+            let recordCollection = {
+                2548: {
+                    albumTitle: 'Slippery When Wet',
+                    artist: 'Bon Jovi',
+                    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+                },
+                2468: {
+                    albumTitle: '1999',
+                    artist: 'Prince',
+                    tracks: ['1999', 'Little Red Corvette']
+                },
+                1245: {
+                    artist: 'Robert Palmer',
+                    tracks: []
+                },
+                5439: {
+                    albumTitle: 'ABBA Gold'
+                },
+                3499: {
+                    albumTitle: 'Nevermind',
+                    artist: 'Nirvana',
+                    tracks: ['Smells Like Teen Spirit','Come As You Are','']
+                },
+                7943: {
+                    albumTitle: 'A Head Full Of Dreams',
+                    artist: 'Coldplay',
+                    tracks: ['Army Of One','Birds','Everglow']
+                }
+            };
+
+            // Function to update albumns
+            function updateRecords(records, id, prop, value) {
+                const albumn = records[id];
+                if (value === '') {
+                    delete albumn[prop];
+                } else if (prop !== 'tracks') {
+                    albumn[prop] = value;
+                } else if (prop === 'tracks') {
+                    albumn['tracks'] = albumn['tracks'] || [];    // short-circuit evaluation
+                    albumn['tracks'].push(value);
+                }
+                return records;
+            }
+
+            // Taking user input
+            let albumnID = prompt('--JAVASCRIPT MUSIC LIBRARY--\n\nEnter your Albumn ID below : ');
+            let propName = prompt('What do you want to update ?');
+            let updateVal = prompt('Enter your new value below : ');
+            updateRecords(recordCollection,albumnID,propName,updateVal);
+
+            // Display
+            alert('---UPDATED SUCCESSFULLY---\nArtist : Coldplay\n' + 'Albumn : A Head Full Of Dreams' + '\n--Songs--\n1. ' + recordCollection['7943']['tracks'][0] + '\n2. ' + recordCollection['7943']['tracks'][1] + '\n3. ' + recordCollection['7943']['tracks'][2] + '\n4. ' + recordCollection['7943']['tracks'][3]);
+
+        </script>
+    </body>
+</html>
