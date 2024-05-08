@@ -51,8 +51,9 @@
             let end = prompt('Where do you want to end ?');
             let count = odd(choice,start,end);
 
+            
             // Display
-            alert('FOUND YOUR NUMBERS...\n' + choice +' numbers from ' + start + ' to ' + end + '\n' + oddNos );
+            alert('FOUND YOUR NUMBERS...\n\n' + choice +' numbers from ' + start + ' to ' + end + ':\n| ' + oddNos[0] + ' | ' + oddNos[1] + ' | ... | ' + oddNos[oddNos.length-2] + ' | ' + oddNos[oddNos.length-1] + ' |' + '\n\nTotal Numbers : ' + count );
 
         </script>
     </body>
