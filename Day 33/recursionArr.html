@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOK CHECKER</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+
+            /* Array Operation Centre - ADD , SUB, MUL, DIV */
+
+            // Array for storing odd numbers
+            let oddNos = []
+
+            // Function to store odd numbers in array
+            function odd(choice, start, end) {
+                switch (choice) {
+                    case 'even':
+                    case 'Even':
+                        if (start % 2 === 0) {
+                            for (start; start <= end; start += 2) {
+                                oddNos.push(start);
+                            }
+                        } else if (start % 2 !== 0) {
+                            start++;
+                            for (start; start <= end; start += 2) {
+                                oddNos.push(start);
+                            }
+                        }
+                    case 'odd':
+                    case 'Odd':
+                        if (start % 2 === 0) {
+                            start++;
+                            for (start; start <= end; start += 2) {
+                                oddNos.push(start);
+                            }
+                        } else if (start % 2 !== 0) {
+                            for (start; start <= end; start += 2) {
+                                oddNos.push(start);
+                            }
+                        }
+                }
+                return oddNos.length;
+            }
+
+            // Taking user input
+            let choice = prompt('--JAVASCRIPT ODD COUNTER--\n\nSelect your option\n1. Even\n2. Odd');
+            let start = prompt('Wher do you want to start ?');
+            let end = prompt('Where do you want to end ?');
+            let count = odd(choice,start,end);
+
+            
+            // Display
+            alert('FOUND YOUR NUMBERS...\n\n' + choice +' numbers from ' + start + ' to ' + end + ':\n| ' + oddNos[0] + ' | ' + oddNos[1] + ' | ... | ' + oddNos[oddNos.length-2] + ' | ' + oddNos[oddNos.length-1] + ' |' + '\n\nTotal Numbers : ' + count );
+
+        </script>
+    </body>
+</html>
