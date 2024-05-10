@@ -8,6 +8,11 @@
 // RECURSION 
 
 let array = [1,2,3,4,5,6,7,8,9,10];
+let add = 0;
+
+for(let i=0;i<array.length;i++){
+    add += array[i];
+}
 
 // [SUM] Recursive Function 
 function sum(arr,n){
@@ -20,7 +25,6 @@ function sum(arr,n){
         return sum(arr,n-1) + arr[n-1];
     }
 }
-
 console.log(sum(array,array.length));
 
 // [MULTIPLY] Recursive Function
@@ -32,3 +36,4 @@ function mul(arr,n){
     }
 }
 console.log(mul(array,array.length));
+

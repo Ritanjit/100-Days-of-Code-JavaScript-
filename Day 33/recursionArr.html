@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BOOK CHECKER</title>
+        <title>ARR SERVICES</title>
     </head>
     <body bgcolor="BLACK">
         <script>
@@ -11,49 +11,75 @@
 
             /* Array Operation Centre - ADD , SUB, MUL, DIV */
 
-            // Array for storing odd numbers
-            let oddNos = []
-
-            // Function to store odd numbers in array
-            function odd(choice, start, end) {
-                switch (choice) {
-                    case 'even':
-                    case 'Even':
-                        if (start % 2 === 0) {
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        } else if (start % 2 !== 0) {
-                            start++;
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
+            // Pushing user input elements in Array
+            let arrayType = prompt('Enter your array dimension : \n1. ONE\n2. TWO');
+            let array = [];
+            switch (arrayType) {
+                case 'one':
+                case 'ONE':
+                    let length = prompt('Enter your array length below : ');
+                    for (let i = 0; i < length; i++) {
+                        element = prompt('Enter element number ' + i + ' below : ');
+                        array.push(element);
+                    }
+                    break;
+                case 'two':
+                case 'TWO':
+                    let row = prompt('Enter your row size below : ');
+                    let column = prompt('Enter your column size below : ');
+                    for (let i = 0; i < row; i++) {
+                        array[i] = [];
+                        for (let j = 0; j < column; j++) {
+                            element = prompt('Enter element number [' + i + '][' + j + '] below : ');
+                            array.push(element);
                         }
-                    case 'odd':
-                    case 'Odd':
-                        if (start % 2 === 0) {
-                            start++;
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        } else if (start % 2 !== 0) {
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        }
-                }
-                return oddNos.length;
+                    }
+                    break;
             }
+            alert('\nYour Array : \n\n[ ' + array + ' ]');
 
-            // Taking user input
-            let choice = prompt('--JAVASCRIPT ODD COUNTER--\n\nSelect your option\n1. Even\n2. Odd');
-            let start = prompt('Wher do you want to start ?');
-            let end = prompt('Where do you want to end ?');
-            let count = odd(choice,start,end);
+            // [SUM] Recursive Function 
+            function sum(arr,n){
+                if(n<=0){
+                    return 0;       // Base case
+                } else{
+                    return sum(arr,n-1) + arr[n-1];
+                }
+            }
+            let add = sum(array,array.length);
 
-            
-            // Display
-            alert('FOUND YOUR NUMBERS...\n\n' + choice +' numbers from ' + start + ' to ' + end + ':\n| ' + oddNos[0] + ' | ' + oddNos[1] + ' | ... | ' + oddNos[oddNos.length-2] + ' | ' + oddNos[oddNos.length-1] + ' |' + '\n\nTotal Numbers : ' + count );
+            // [PRODUCT] Recursive Function
+            function prod(arr,n){
+                if(n<=0){
+                    return 1;
+                } else{
+                    return prod(arr,n) * arr[n-1];
+                }
+            }
+            let mul = prod(array,array.length);
+
+            let operation = prompt('What do you want to find ? \n1. SUM\n2. PRODUCT\n3. ELEMENT\n4. LAST ELEMENT');
+            switch(operation){
+                case 'sum':
+                case 'SUM':
+                    // let add = sum(array,array.length);
+                    alert('The SUM is : ' + add + ' !!');
+                    break;
+                case 'product':
+                case 'PRODUCT':
+                    // let mul = prod(array,array.length);
+                    alert('The PRODUCT is : ' + mul + ' !!');
+                    break;
+                case 'element':
+                case 'ELEMENT':
+                    let found = prompt("What is your element's position ? ");
+                    alert('Your element is : ' + array[found-1] + ' !!');
+                    break;
+                case 'last element':
+                case 'LAST ELEMENT':
+                    alert('The LAST element is : ' + array[array.length-1] + ' !!');
+                    break;
+            }
 
         </script>
     </body>
