@@ -7,28 +7,73 @@
 
 // RECURSION 
 
-let array = [1,2,3,4,5,6,7,8,9,10];
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // [SUM] Recursive Function 
-function sum(arr,n){
+function sum(arr, n) {
     // Base Case (bottom limit)
-    if(n<=0){
+    if (n <= 0) {
         return 0;
-    } 
+    }
     // Recursive Case (the value is stored in the return statement)
-    else{
-        return sum(arr,n-1) + arr[n-1];
+    else {
+        return sum(arr, n - 1) + arr[n - 1];
     }
 }
-console.log(sum(array,array.length));
+console.log(sum(array, array.length));
 
 // [MULTIPLY] Recursive Function
-function mul(arr,n){
-    if(n<=0){
+function mul(arr, n) {
+    if (n <= 0) {
         return 1;
-    } else{
-        return mul(arr,n-1) * arr[n-1];
+    } else {
+        return mul(arr, n - 1) * arr[n - 1];
     }
 }
-console.log(mul(array,array.length));
+console.log(mul(array, array.length));
+
+
+
+
+// Funtion without RECURSION
+function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+        product *= arr[i];
+    }
+    return product;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function with RECURSION
+function multiply(arr, n) {
+    if (n <= 0) {
+        return 1;
+    } else {
+        return multiply(arr, n - 1) * arr[n - 1];
+    }
+}
+
+
+
+
+
+
+
+
+
 
