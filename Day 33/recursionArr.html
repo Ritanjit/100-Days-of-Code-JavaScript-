@@ -38,28 +38,29 @@
             }
             alert('\nYour Array : \n\n[ ' + array + ' ]');
 
+
             // [SUM] Recursive Function 
-            function sum(arr,n){
-                if(n<=0){
+            function sum(arr, n) {
+                if (n <= 0) {
                     return 0;       // Base case
-                } else{
-                    return sum(arr,n-1) + arr[n-1];
+                } else {
+                    return sum(arr, n - 1) + arr[n - 1];
                 }
             }
-            let add = sum(array,array.length);
+            let add = sum(array, array.length);
 
             // [PRODUCT] Recursive Function
-            function prod(arr,n){
-                if(n<=0){
+            function prod(arr, n) {
+                if (n <= 0) {
                     return 1;
-                } else{
-                    return prod(arr,n) * arr[n-1];
+                } else {
+                    return prod(arr, n) * arr[n - 1];
                 }
             }
-            let mul = prod(array,array.length);
+            let mul = prod(array, array.length);
 
             let operation = prompt('What do you want to find ? \n1. SUM\n2. PRODUCT\n3. ELEMENT\n4. LAST ELEMENT');
-            switch(operation){
+            switch (operation) {
                 case 'sum':
                 case 'SUM':
                     // let add = sum(array,array.length);
@@ -73,14 +74,14 @@
                 case 'element':
                 case 'ELEMENT':
                     let found = prompt("What is your element's position ? ");
-                    alert('Your element is : ' + array[found-1] + ' !!');
+                    alert('Your element is : ' + array[found - 1] + ' !!');
                     break;
                 case 'last element':
                 case 'LAST ELEMENT':
-                    alert('The LAST element is : ' + array[array.length-1] + ' !!');
+                    alert('The LAST element is : ' + array[array.length - 1] + ' !!');
                     break;
             }
-
         </script>
+
     </body>
 </html>
