@@ -32,9 +32,6 @@ function mul(arr, n) {
 }
 console.log(mul(array, array.length));
 
-
-
-
 // Funtion without RECURSION
 function multiply(arr, n) {
     let product = 1;
@@ -43,21 +40,6 @@ function multiply(arr, n) {
     }
     return product;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Function with RECURSION
 function multiply(arr, n) {

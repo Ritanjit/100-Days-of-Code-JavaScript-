@@ -8,52 +8,62 @@
     <body bgcolor="BLACK">
         <script>
 
+            /* PHONEBOOK LOOKUP */
 
-            /* Array Operation Centre - ADD , SUB, MUL, DIV */
+            // Address book
+            const contacts = [
+                {
+                    firstName: "Akira",
+                    lastName: "Laine",
+                    number: "0543236543",
+                    address: ["70308", "Wisconsin", "USA"],
+                },
+                {
+                    firstName: "Harry",
+                    lastName: "Potter",
+                    email: "ihatevoldemort@gmail.com",
+                    address: ["Boys Hostel 2", "Gryfindor", "Hogwarts"],
+                },
+                {
+                    firstName: "Sherlock",
+                    lastName: "Holmes",
+                    number: "0487345643",
+                    address: ["221B", "Baker Street","London"],
+                },
+                {
+                    firstName: "Naruto",
+                    lastName: "Uzumaki",
+                    address: ["2nd floor", "govt. quater", "Konoha"],
+                },
+            ];
 
-            // Array for storing odd numbers
-            let oddNos = []
+            let lName = '';
 
-            // Function to store odd numbers in array
-            function odd(choice, start, end) {
-                switch (choice) {
-                    case 'even':
-                    case 'Even':
-                        if (start % 2 === 0) {
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        } else if (start % 2 !== 0) {
-                            start++;
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
+            // function to find contact
+            function lookUp(name, prop) {
+                // Only change code below this line
+                for (let i = 0; i < contacts.length; i++) { 
+                    if (contacts[i].firstName == name) {
+                        if (contacts[i].hasOwnProperty(prop)) {
+                            lName = contacts[i].lastName;
+                            return contacts[i][prop];
+                        } else {
+                            return 'No such information';
                         }
-                    case 'odd':
-                    case 'Odd':
-                        if (start % 2 === 0) {
-                            start++;
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        } else if (start % 2 !== 0) {
-                            for (start; start <= end; start += 2) {
-                                oddNos.push(start);
-                            }
-                        }
+                    }
                 }
-                return oddNos.length;
+                return 'No such contact';
+                // Only change code above this line
             }
 
             // Taking user input
-            let choice = prompt('--JAVASCRIPT ODD COUNTER--\n\nSelect your option\n1. Even\n2. Odd');
-            let start = prompt('Wher do you want to start ?');
-            let end = prompt('Where do you want to end ?');
-            let count = odd(choice,start,end);
+            let person = prompt('--JAVASCRIPT CONTACT FINDER--\n\nWho do you want to find ?');
+            let info = prompt('What do you want to search ?\n\n1. Full Name\n2. Email\n3. Address');
+            let found = lookUp(person,info)
 
-            
+
             // Display
-            alert('FOUND YOUR NUMBERS...\n\n' + choice +' numbers from ' + start + ' to ' + end + ':\n| ' + oddNos[0] + ' | ' + oddNos[1] + ' | ... | ' + oddNos[oddNos.length-2] + ' | ' + oddNos[oddNos.length-1] + ' |' + '\n\nTotal Numbers : ' + count );
+            alert('-- CONTACT FOUND !! --\n' + 'Full Name : ' + person + ' ' + lName + '\n' + info + ' : ' + found + '\n');
 
         </script>
     </body>

@@ -43,8 +43,8 @@ const contacts = [
 
 function lookUpProfile(name, prop) {
     // Only change code below this line
-    for (let i = 0; i < contacts.length; i++) {
-        if (contacts[i].firstName == name) {
+    for (let i = 0; i < contacts.length; i++) { 
+        if (contacts[i].firstName === name) {
             if (contacts[i].hasOwnProperty(prop)) {
                 return contacts[i][prop];
             } else {
@@ -56,5 +56,5 @@ function lookUpProfile(name, prop) {
     // Only change code above this line
 }
 
-let result = lookUpProfile("Akira", "likes");
+let result = lookUpProfile("Akira", "lastName");
 console.log(result);
