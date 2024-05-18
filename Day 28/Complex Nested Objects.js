@@ -77,7 +77,7 @@ let mvp = bayernXI.forward["Gerd Muller"].goals;
 
 
 // Display
-console.log('\n\n\n\t\t   ---BAYERN MUNCHEN HALL OF FAME---\n');
+console.log('\n\n\n\t\t    ---BAYERN MUNCHEN HALL OF FAME---\n');
 console.log('\n\t\tGOAL-KEEPER : Oliver Kahn   | Matches : ' + gk);
 console.log('\n\t\tDEFENDER    : Philip Lahm   | Matches : ' + def);
 console.log('\n\t\tMID-FIELD   : Frank Ribbery | Goals   : ' + mid);
