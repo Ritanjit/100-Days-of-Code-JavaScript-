@@ -12,7 +12,7 @@ const MAX2 = Math.max(...arr2);
 // Spread operator works only with functions and [expressions]...
 let temp = [];
 temp = [...arr];        // This will work
-temp = ...arr           // This will not work
+temp = [...arr];        // This will not work
 
 // TIP: spread operator (...arg) allows you to expand arrays and expressions where multiple arguments or elements are expected.
 
