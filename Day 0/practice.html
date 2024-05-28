@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOK CHECKER</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+            /* NUMERICAL PAASWORD GENERATOR */
+
+            // function to generate random 10 digit number
+            function pass(fav){
+                let n = (((fav*99)/37)**10)/(10**4);
+                return Math.floor(Math.random()*n);
+            }
+
+            // Taking user input
+            let fav = prompt('--JAVASCRIPT PASSWORD GENERATOR--\n\nWhat is your lucky number ?');
+            let password = pass(fav);
+
+            // Display
+            alert(' Generating your unique password...\n' + 'Password : ' + password + '\n');
+
+        </script>
+    </body>
+</html>
