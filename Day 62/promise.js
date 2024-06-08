@@ -10,7 +10,7 @@ const myPromise = new Promise ((resolve, reject) => {
 });
 
 // creating another Promise...
-const makeServerRequest = new Promise ((resolve, request) => {
+const makeServerRequest = new Promise ((resolve, reject) => {
 
 });
 
