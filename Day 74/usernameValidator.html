@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>username checker</title>
+    </head>
+    <body bgcolor="BLACK">
+        <script>
+
+            /* USERNAME VALIDATOR */
+
+            // function to check username
+            function userValidate(userName) {
+                let regex = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+                let result = regex.test(userName);
+                if (result) {
+                    return 'awesome! your username is validated :)'
+                } else {
+                    return 'invalid! try again with a proper username :('
+                }
+            }
+
+            // Taking user input
+            let userName = prompt('--JAVASCRIPT USERNAME VALIDATOR--\n1. Usernames can only use alphanumeric characters.\n2. The only numbers in the username have to be at the end.There can be zero or more of them at the end.Username cannot start with the number.\n3. Username letters can be lowercase and uppercase.\n4. Two character username can only use alphabet letters as characters. \n\nEnter your username below : ');
+            let result = userValidate(userName);
+
+
+            // Display
+            alert('\n' + result + '\n');
+
+        </script>
+    </body>
+</html>
