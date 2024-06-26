@@ -1,16 +1,27 @@
 /* splice() in JavaScript */
 
-// splice() lets delete any particular elements within the array at any index.
-// splice() modifies the array and creates new array with the removed elements.
-// splice() can have three parameters.
-// first argument is the starting index and second is the number of indices to delete
+// splice() ---> delete, retrieve and add element anywhere in the array. also create new array with retrieved elements.
+// 1st parameter === starting index
+// 2nd parameter === no. of indices to delete
+// 3rd parameter === quickly add any no. of elements to that starting index (separated by commas)
 
-const arr = [2, 4, 5, 1, 7, 5, 2, 1];
-console.log('\n\nOriginal Array : ' + arr);
+function htmlColorNames(arr) {
+    // Only change code below this line
+    arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+    // Only change code above this line
+    return arr;
+}
 
-let newArr = arr.splice(1,4);
+let arr = ['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick'];
+console.log('\n\n\nOriginal Array : \n\n', arr);
 
-console.log('\nsplicing...\nModified Array : ' + arr);
-console.log('\nNew array : ' + newArr + '\n\n');
+let newArr = htmlColorNames(arr);
+console.log('\n\nsplicing...\n\n\nModified Array : \n\n', arr);
+console.log('\n\n\nNew array : \n\n', newArr, '\n\n');
 
-// tip: 
+// tip: add any number of elements through splice(), just remember to separate them using commas ','
+
+
+
+
+
