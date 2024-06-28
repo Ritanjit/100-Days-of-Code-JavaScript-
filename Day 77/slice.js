@@ -31,7 +31,6 @@ console.log('\n\n\nNew array : \n\n', newArr, '\n\n');
 
 
 
--
 
 
 
