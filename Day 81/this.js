@@ -7,3 +7,5 @@ let dog = {
 };
 
 console.log(dog.sayLegs());
+
+// this keyword in objects help ensure that if object name is changed, then its references aren't required to be changed one by one.

@@ -13,4 +13,4 @@ function chunkArrayInGroups(arr, size) {
 }
 
 let a = chunkArrayInGroups(["a", "b", "c", "d"], 2);
-console.log(a);
+console.log(a); 
