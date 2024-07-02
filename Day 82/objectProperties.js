@@ -1,4 +1,6 @@
-/* object properties for constructors in JavaScript */
+/* instance object properties for constructors in JavaScript */
+
+// 'own properties' are special to instances (objects) of constructors and doesn't affect the constructor itself
 
 // constructor...
 function cars(company,hp) {
