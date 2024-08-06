@@ -20,7 +20,7 @@ console.log('\n\nRegex : ' + greedyRegex + '\n\nExtracting greedy match...\nMatc
 console.log(greedyM);
 console.log('\n- - - - - - - - - - - - - - - - - - - - - - - - - -');
 
-console.log('\n\nRegex : ' + lazyRegex + '\n\nExtracting greedy match...\nMatch Result : ' + lazyM + '\n\n');
+console.log('\n\nRegex : ' + lazyRegex + '\n\nExtracting lazy match...\nMatch Result : ' + lazyM + '\n\n');
 console.log(lazyM);
 console.log('\n- - - - - - - - - - - - - - - - - - - - - - - - - -');
 

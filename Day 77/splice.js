@@ -1,4 +1,4 @@
-/* splice() in JavaScript */
+-/* splice() in JavaScript */
 
 // splice() ---> delete, retrieve and add element anywhere in the array. also create new array with retrieved elements.
 // 1st parameter === starting index
@@ -20,8 +20,6 @@ console.log('\n\nsplicing...\n\n\nModified Array : \n\n', arr);
 console.log('\n\n\nNew array : \n\n', newArr, '\n\n');
 
 // tip: add any number of elements through splice(), just remember to separate them using commas ','
-
-
 
 
 

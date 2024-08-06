@@ -9,3 +9,6 @@ let result = reRegex.test(repeatNum);
 let result2 = repeatNum.match(reRegex);
 console.log(result);
 console.log(result2);
+
+let str = "thisIsSpinalTap";
+let r = /([a-z])([A-Z])/g
