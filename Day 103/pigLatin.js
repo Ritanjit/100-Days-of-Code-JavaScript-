@@ -5,7 +5,7 @@
 
 const pigLatinTranslate = str => {
 
-    let pigLatin = '';
+    let pigLatin = ''
 
     // vowel regex
     let vowel = /[aeiou]/ig;
